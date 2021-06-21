@@ -12,7 +12,32 @@ class Home extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.amber[400],
       ),
-      body: Padding(child: Text("Hello"), padding: EdgeInsets.all(90.0)),
+      body: Row(
+        children: <Widget>[
+          Expanded(flex: 3, child: Image.asset("assets/space-2.jpg")),
+          Expanded(
+            flex: 3,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.cyan,
+                child: Text("1")),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.pinkAccent,
+                child: Text("2")),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+                padding: EdgeInsets.all(30.0),
+                color: Colors.amber,
+                child: Text("3")),
+          ),
+        ],
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text("Click"),
